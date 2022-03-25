@@ -12,7 +12,9 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/healthcheck", (req, res) => {
-  res.status(200).json({ status: 200, message: "Successful authentication" });
+  res
+    .status(200)
+    .json({ status: 200, message: "executes next() on /healthcheck" });
 });
 
 app.listen(4000, () => {
