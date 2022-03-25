@@ -6,7 +6,7 @@
 
 ```
 $ git clone https://github.com/Siddhesh8220/unit-testing.git
-$ cd node-assignment
+$ cd unit-testing
 ```
 
 ### 2. Then install the dependencies:
