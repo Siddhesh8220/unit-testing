@@ -30,7 +30,7 @@ describe("basic-authentication", () => {
       });
   });
 
-  // Request with /healthcheck api
+  // Request with /healthcheck api which will execute next()
   it("request with /healthcheck api", (done) => {
     chai
       .request(app)
