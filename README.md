@@ -15,7 +15,7 @@ $ cd node-assignment
 $ npm install
 ```
 
-### 3. Run unit test.
+### 3. Run unit test and get coverage info.
 
 ```
 $ npm run coverage
