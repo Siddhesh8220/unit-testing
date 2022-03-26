@@ -21,12 +21,13 @@ describe("basic-authentication", () => {
 
   //Request with invalid credentials
   it("invalid auth credentials", () => {
+    const expectedResult = { status: 401, message: "Unauthorized" };
     chai
       .request(app)
       .get("/home")
       .auth("Siddhesh", "565454")
       .end((err, res) => {
-        expect(res).to.have.status(401);
+        expect(res.body).to.eql(expectedResult);
       });
   });
 
@@ -43,11 +44,12 @@ describe("basic-authentication", () => {
 
   // Request with no authentication header
   it("request with no auth header", () => {
+    const expectedResult = { status: 401, message: "Unauthorized" };
     chai
       .request(app)
       .get("/home")
       .end((err, res) => {
-        expect(res).to.have.status(401);
+        expect(res.body).to.eql(expectedResult);
       });
   });
 });
